@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Sidebar1 from '../components/Common/Sidebar1';
 import searchicon from '../assets/img/searchicon.png';
 import invoice from '../assets/img/invoice 1.png';
 import Profilebar from '../components/Common/Profilebar';
+import { push } from 'connected-react-router';
+import { useDispatch } from 'react-redux';
+import Transactionpopup from '../components/Common/Transactionpopup';
 
 function Transaction() {
+    const dispatch = useDispatch();
+    const [, setShowNewinvoice] = useState(false);
+
+    const clickNewinvoice = () => {
+        setShowNewinvoice(true);
+    };
+
     return (
         <>
             <div class="welcomeback!">
@@ -22,7 +32,7 @@ function Transaction() {
 
                         <input class="searchbar" type="text" placeholder="Search here" />
                         <img class="searchicon" src={searchicon} alt="" />
-                        <button class="invoicebutton">
+                        <button class="invoicebutton" onClick={clickNewinvoice}>
                             <img class="invoice" src={invoice} alt="" />
                             <span class="newInvoices"> + new invoices </span>
                         </button>

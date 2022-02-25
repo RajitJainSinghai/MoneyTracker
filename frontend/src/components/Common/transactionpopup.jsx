@@ -1,6 +1,12 @@
 import React from 'react';
 
-function transactionpopup() {
+const Transactionpopup = props=>  {
+
+    const item =({
+        setShowitem
+    }) => {
+        
+    }
     return (
         <>
             <div id="custom-modal" class="custom-modal">
@@ -49,7 +55,7 @@ function transactionpopup() {
                                             </label>
                                             <input class="custom-input-modal" type="date" />
                                         </div>
-                                        <button class="custom-btn active">Add</button>)
+                                        <button class="custom-btn active">Add</button>
                                     </div>
                                 </div>
                             </form>
@@ -59,7 +65,6 @@ function transactionpopup() {
             </div>
         </>
     );
-    }
+}
 
-
-export default transactionpopup;
+export default Transactionpopup;

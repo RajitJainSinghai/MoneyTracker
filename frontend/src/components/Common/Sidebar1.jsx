@@ -13,7 +13,7 @@ function Sidebar1() {
             <div class="sidebar">
                 <img class="logo" src={logo} alt="" />
                 <img class="dashboard" src={dashboard} alt="" />
-                <img class="transaction" src={transaction} alt="" />
+                <img class="transaction" src={transaction} alt="" onClick={() => dispatch(push('/Addtransaction'))} />
                 <img class="account" src={account} alt="" onClick={() => dispatch(push('/addprofile'))} />
             </div>
         </>

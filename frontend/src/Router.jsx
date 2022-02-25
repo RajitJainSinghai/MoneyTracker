@@ -8,6 +8,7 @@ import Dashboard from './containers/Dashboard';
 import Addtransaction from './containers/Addtransaction';
 import Transaction from './containers/Transaction';
 import Transactionlist from './containers/Transactionlist';
+import transactionpopup from './components/Common/transactionpopup';
 
 const Router = () => {
     return (
@@ -21,6 +22,7 @@ const Router = () => {
                 <Route exact path={'/addtransaction'} component={Addtransaction} />
                 <Route exact path={'/transaction'} component={Transaction} />
                 <Route exact path={'/transactionlist'} component={Transactionlist} />
+                <Route exact path={'/transactionpopup'} component={transactionpopup} />
             </Switch>
         </>
     );
